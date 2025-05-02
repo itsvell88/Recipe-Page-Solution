@@ -1,0 +1,272 @@
+/* Reset Some Default Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Ensures padding & border don't affect width or height */
+}
+
+/* Default Styling */
+body {
+  background-color: hsl(30, 54%, 90%);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ### */
+/* Main Styling */
+
+/* Page Container */
+main {
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  max-width: 800px;
+  padding: 2.813rem;
+  margin: 8.75rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Omelette Image */
+.omellete-img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Main Title - Simple Omelette Recipe */
+h1 {
+  font-family: "Young Serif", serif;
+  font-size: 2.7rem;
+  color: hsl(24, 5%, 18%);
+  margin-bottom: 15px;
+}
+
+/* All Body Texts */
+p {
+  color: hsl(30, 10%, 34%);
+  margin-bottom: 30px;
+}
+
+/* Preparation Time - Container */
+.prep-time {
+  background-color: hsl(330, 100%, 98%);
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Preparation Time - Title */
+h3 {
+  margin-left: 7px;
+  color: hsl(332, 51%, 32%);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* Preaparation Detail - List */
+.prep-detail {
+  margin-left: 30px;
+}
+
+/* Preparation Detail - Bullet Style */
+.prep-detail ::marker {
+  color: hsl(332, 51%, 32%);
+}
+
+/* All Items on List */
+li {
+  padding-left: 1rem;
+  color: hsl(30, 10%, 34%);
+  margin-bottom: 0.6rem;
+}
+
+/* Highlighted Text - Bold */
+span {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* All Sub-Titles - Ingredients, Intsructions, Nutrition */
+h2 {
+  font-family: "young serif";
+  font-style: normal;
+  font-size: 2rem;
+  color: hsl(14, 45%, 36%);
+  margin-bottom: 15px;
+}
+
+/* Divider Line */
+hr {
+  border: none; /* Removes default border */
+  height: 1px;
+  background-color: hsl(30, 10%, 34%); /* Line color */
+  opacity: 0.25;
+  margin-bottom: 25px;
+}
+
+/* Ingredients List */
+.ingredients-list {
+  padding-left: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Ingredients List - Bullet Style */
+.ingredients-list ::marker {
+  color: hsl(14, 45%, 36%);
+}
+
+/* Instruction Steps */
+ol {
+  margin-left: 25px;
+  margin-bottom: 30px;
+}
+
+/* Instruction Steps - Bullet Style */
+ol li::marker {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+}
+
+/* Nutrition Table Value Style */
+.span-color {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: hsl(14, 45%, 36%);
+}
+
+/* Nutrition Table */
+.nutrition-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+}
+
+/* Nutrition Table Row Display */
+.table-row {
+  display: contents;
+}
+
+/* Nutrition Table Contents */
+.label,
+.value {
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  border-bottom: 1px solid hsla(30, 10%, 34%, 0.25);
+  justify-content: left;
+}
+
+/* First Column Text */
+.label {
+  color: hsl(30, 10%, 34%);
+}
+
+/* Remove Last Line After 'Fat' */
+.table-row:last-of-type .label,
+.table-row:last-of-type .value {
+  border-bottom: none;
+}
+
+/* Footnote */
+.attribution {
+  margin-bottom: 2rem;
+}
+
+/* ### */
+/* MOBILE VERSION */
+@media (max-width: 600px) {
+  /* Make BG Full White */
+  body {
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  /* Make The Page Full Screen */
+  main {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  /* Full Screen Image */
+  .omellete-img {
+    border-radius: 0%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  /* Main Title */
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 20px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-top: 10px;
+  }
+
+  /* Body Text Margin */
+  p {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  /* Preparation Time Container Margin */
+  .prep-time {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    width: auto;
+  }
+
+  /* Sub-Titles Margin */
+  h2 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  /* Ingredient Section Margin */
+  .ingredients-list {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  /* Line Divider Margin */
+  hr {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  /* Instruction Steps Margin */
+  ol {
+    margin-left: 4rem;
+    margin-right: 2.5rem;
+  }
+
+  /* Nutrition Table Margin */
+  .nutrition-table {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  /* Footnote Position */
+  .attribution {
+    margin-top: 4rem;
+    color: hsl(14, 45%, 36%);
+  }
+}
